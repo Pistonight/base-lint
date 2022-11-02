@@ -7,3 +7,4 @@ Include iTNTPiston/base-lint as submodule and just call it
 ## Dev
 `python3 -m pip install pycodestyle`
 `pycodestyle .`
+`python3 . . -c`

@@ -1,7 +1,7 @@
 from os import listdir
 from os.path import isfile, isdir, join
 
-def normalize_path(rel_path): 
+def normalize_path(rel_path):
     if isfile(rel_path):
         if rel_path.endswith("/"):
             rel_path = rel_path[:-1]
@@ -77,7 +77,7 @@ def lint_file(file_path, *, verbose: bool, windows: bool, fix: bool):
         last_line = None
         while True:
             line = file.readline()
-            
+
             if not line:
                 # End of file
                 break
@@ -104,7 +104,7 @@ def lint_file(file_path, *, verbose: bool, windows: bool, fix: bool):
                         errors.add("Trailing Whitespace")
             if fix:
                 good_lines.append(line)
-            
+
         if last_line is not None:
             if last_line[-1] != "\n":
                 if fix:

@@ -27,7 +27,7 @@ parser.add_argument(
     nargs="*",
     help="File or root directory to lint")
 parser.add_argument(
-    "-i", 
+    "-i",
     "--ignore",
     metavar="SUFFIX",
     action="append",

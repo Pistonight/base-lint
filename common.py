@@ -15,7 +15,7 @@ COMMON_IGNORE = [
     ".exe",
     ".wasm",
     ".vsix",
-    
+
     # Archives
     ".zip",
     ".tar",
@@ -24,7 +24,7 @@ COMMON_IGNORE = [
     # Fonts
     ".otf",
     ".ttf"
-    
+
     # Other text files
     ".log"
 
