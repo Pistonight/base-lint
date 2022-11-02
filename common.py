@@ -1,6 +1,6 @@
 COMMON_IGNORE = [
     "/.git/",
-    "/__pycache/",
+    "/__pycache__/",
     "/.vscode/",
     "/node_modules/",
 

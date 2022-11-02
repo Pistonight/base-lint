@@ -123,6 +123,7 @@ if args.common:
 
 errors = []
 for input_path in args.input:
+    input_path = input_path.replace("\\", "/")
     if input_path == ".":
         input_path = "./"
     if not input_path.startswith("./"):
@@ -139,6 +140,7 @@ for rel_path, suberrors in errors:
         for suberror in suberrors:
             print(f"  {suberror}")
     else:
-        print(f"{rel_path}: {suberrors[0]}")
+        suberror = "".join(suberrors)
+        print(f"{rel_path}: {suberror}")
 
 sys.exit(1)
