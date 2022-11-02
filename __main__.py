@@ -106,13 +106,13 @@ if args.profile:
     for profile in args.profile:
         with open(profile, "r", encoding="utf-8") as toml_file:
             data = toml.load(toml_file)
-        if data["ignore"]:
+        if "ignore" in data and data["ignore"]:
             for ignore in data["ignore"]:
                 ignores.add(ignore)
-        if data["windows"]:
+        if "windows" in data and data["windows"]:
             for windows in data["windows"]:
                 windows_files.add(windows)
-        if data["add"]:
+        if "add" in data and data["add"]:
             for add in data["add"]:
                 ignores.remove(add)
 if args.common:
