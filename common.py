@@ -20,6 +20,10 @@ COMMON_IGNORE = [
     ".zip",
     ".tar",
     ".gz",
+
+    # Fonts
+    ".otf",
+    ".ttf"
     
     # Other text files
     ".log"
