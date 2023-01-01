@@ -123,7 +123,7 @@ def lint_file(file_path, *, verbose: bool, windows: bool, fix: bool):
                     errors.add("Too many trailing new lines")
 
     if fix:
-        with open(file_path, 'w', encoding="utf-8", newline=le) as file:
+        with open(file_path, 'w', encoding="utf-8", newline="") as file:
             file.writelines(good_lines)
 
     return errors
