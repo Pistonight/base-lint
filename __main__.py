@@ -6,7 +6,7 @@ EXAMPLES = """
 examples:
   Current folder with common ignores
     basic-lint . -c
-  scripts folder with common ignores and ignore file or directories that ends with .txt
+  scripts folder with common ignores and ignore file (not directories) that ends with .txt
     basic-lint scripts -c -i .txt
   ignore directory that ends with build but not files
     basic-lint . -i build/

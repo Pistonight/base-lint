@@ -1,4 +1,4 @@
-from os import listdir
+from os import listdir, access, W_OK
 from os.path import isfile, isdir, join
 
 def normalize_path(rel_path):
@@ -67,6 +67,10 @@ def lint_path(rel_path, errors: list, *, verbose: bool, skip_binary: bool, ignor
 
 def lint_file(file_path, *, verbose: bool, windows: bool, fix: bool):
     """Lint file"""
+    if not access(file_path, W_OK):
+        if verbose:
+            print(f"Ignoring read-only file {file_path}")
+            return
     if verbose:
         print(f"Checking {file_path}")
     errors = set()
