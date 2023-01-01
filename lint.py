@@ -70,7 +70,7 @@ def lint_file(file_path, *, verbose: bool, windows: bool, fix: bool):
     if not access(file_path, W_OK):
         if verbose:
             print(f"Ignoring read-only file {file_path}")
-            return
+        return
     if verbose:
         print(f"Checking {file_path}")
     errors = set()
