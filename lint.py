@@ -13,10 +13,10 @@ def normalize_path(rel_path):
     return None, None
 
 class SuffixSet:
-    underlying: set[str]
+    underlying: set
     least: int
     most: int
-    def __init__(self, input_set: set[str]):
+    def __init__(self, input_set: set):
         self.underlying = input_set
         self.least = None
         self.most = None
