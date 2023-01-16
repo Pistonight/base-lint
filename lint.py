@@ -101,11 +101,11 @@ def lint_file(file_path, *, verbose: bool, windows: bool, fix: bool):
                         errors.add("Line Ending (Expected \\n)")
 
             # Trailing space
-            if len(line) >= len(le) and line.rstrip() != line[:-len(le)]:
-                    if fix:
-                        line = line.rstrip() + le
-                    else:
-                        errors.add("Trailing Whitespace")
+            if len(line) >= len(le) and line[:-len(le)].rstrip() != line[:-len(le)]:
+                if fix:
+                    line = line.rstrip() + le
+                else:
+                    errors.add("Trailing Whitespace")
             if fix:
                 good_lines.append(line)
 
